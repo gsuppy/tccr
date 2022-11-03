@@ -1,0 +1,20 @@
+@use '@angular/material' as mat;
+
+$menu-palette: mat.$gray-palette;
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  background-color: mat.get-color-from-palette($menu-palette, 200);
+  width: 100%;
+  height: 100%;
+  padding: 2em 1em 0;
+  
+  .routes {
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
