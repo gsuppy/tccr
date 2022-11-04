@@ -1,0 +1,29 @@
+
+.footprint-container {
+  display: flex;
+  flex-direction: column;
+
+  .header-container {
+    display: flex;
+  }
+
+  .optimizer-container {
+    display: flex;
+  }
+  
+  .summary-container {
+    display: flex;
+  }
+
+  .scopes-container {
+    display: flex;
+
+    .scope-1-container {
+      display: flex;
+    }
+    
+    .scope-2-container {
+      display: flex;
+    }
+  }
+}
