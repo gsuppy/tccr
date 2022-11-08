@@ -12,6 +12,7 @@ import { OverviewModule } from "./overview/overview.module";
 import { MachinesModule } from "./machines/machines.module";
 import { OptimizerModule } from "./optimizer/optimizer.module";
 import { ConfigureModule } from "./configure/configure.module";
+import { ReportingModule } from "./reporting/reporting.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { ConfigureModule } from "./configure/configure.module";
     MachinesModule,
     OptimizerModule,
     ConfigureModule,
+    ReportingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -8,6 +8,7 @@ import { ScrollingModule } from "@angular/cdk/scrolling";
 import { CdkStepperModule } from "@angular/cdk/stepper";
 import { CdkTableModule } from "@angular/cdk/table";
 import { CdkTreeModule } from "@angular/cdk/tree";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatBadgeModule } from "@angular/material/badge";
 import { MatBottomSheetModule } from "@angular/material/bottom-sheet";
@@ -18,6 +19,7 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatStepperModule } from "@angular/material/stepper";
 import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatExpansionModule } from "@angular/material/expansion";
@@ -56,6 +58,9 @@ import { DialogModule } from "@angular/cdk/dialog";
     CdkTableModule,
     CdkTreeModule,
     DragDropModule,
+    FormsModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,

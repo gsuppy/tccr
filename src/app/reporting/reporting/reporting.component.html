@@ -1,1 +1,91 @@
-<p>reporting works!</p>
+<div class="reporting-container">
+  <h1>Summary Reporting</h1>
+  <div class="content-view">
+    <div class="left-view">
+      <div class="time-range-container">
+        <h2>Time range</h2>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input matStartDate placeholder="Start date" />
+              <input matEndDate placeholder="End date" />
+            </mat-date-range-input>
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-view">
+      <div class="report-type-container">
+        <h2>Report type</h2>
+        <div class="reports-container">
+          <div>
+            <h3>Carbon footprint report (Scope 1&2)</h3>
+            <p>
+              Full report on Scope 1 & 2 carbon footprint for selected time
+              period, conforming to XXX TODO reporting standard.
+            </p>
+            <div class="generate-field">
+              <p>Format:</p>
+              <mat-form-field appearance="fill">
+                <mat-label>Choose a plan...</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let form of forms" [value]="form">
+                    {{ form }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button mat-raised-button color="primary">Generate</button>
+            </div>
+          </div>
+          <div>
+            <h3>Scope 2 energy usage & mix report</h3>
+            <p>
+              Full report on hour-by-hour Scope 2 energy usage, energy mix, and
+              energy carbon intensity, conforming to XXX TODO reporting
+              standard.
+            </p>
+            <div class="generate-field">
+              <p>Format:</p>
+              <mat-form-field appearance="fill">
+                <mat-label>Choose a plan...</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let form of forms" [value]="form">
+                    {{ form }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button mat-raised-button color="primary">Generate</button>
+            </div>
+          </div>
+          <div>
+            <h3>Full data export</h3>
+            <p>
+              Full data export of all Scope 1 & 2 usage, footprint, and cost
+              data. Can be used to import data into popular financial and carbon
+              accounting platforms.
+            </p>
+            <div class="generate-field">
+              <p>Format:</p>
+              <mat-form-field appearance="fill">
+                <mat-label>Choose a plan...</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let form of forms" [value]="form">
+                    {{ form }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button mat-raised-button color="primary">Generate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

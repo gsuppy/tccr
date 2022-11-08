@@ -6,15 +6,15 @@
         <h1>Insights & Suggestions</h1>
       </div>
 
-      <div class="insight">
+      <div class="insight" *ngFor="let insight of insights">
         <div class="insight-explanation">
-          <h3>Demand</h3>
-          <p>Reduce load</p>
+          <h3>{{ insight.title }}</h3>
+          <p>{{ insight.description }}</p>
         </div>
         <div class="impact">
           <h3>Estimated impact</h3>
-          <p>-1989 kg CO2e per year</p>
-          <p>$-121k energy cost per year</p>
+          <p>{{ insight.co2 }} kg CO2e per year</p>
+          <p>{{ insight.energy }} energy cost per year</p>
         </div>
       </div>
     </div>
@@ -27,22 +27,35 @@
 
       <div class="carbon-plan">
         <p>Current plan:</p>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a plan...</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let form of forms" [value]="form">
+              {{ form }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
         <button mat-raised-button>Create new...</button>
       </div>
       <div class="plan-impact">
         <h3>Plan estimated impact:</h3>
+        <div>
+          <p>Carbon: -1.2 t /yr CO2e (target: -3.0 t)</p>
+          <p>Energy: 0 kWh /yr</p>
+          <p>Energy cost: -$99 /yr</p>
+        </div>
       </div>
       <div class="plan-action">
         <h3>Plan actions:</h3>
         <div class="action-card">
           <div class="action">
-            <h3>Load redistribution action</h3>
-            <p>Shift 20%</p>
+            <h3>{{ insights[3].title }}</h3>
+            <p>{{ insights[3].description }}</p>
           </div>
           <div class="contribution">
             <h3>Estimated contribution</h3>
-            <p>-1162 kg CO2 e/yr</p>
-            <p>-$99 energy cost /yr</p>
+            <p>{{ insights[3].co2 }} kg CO2 e/yr</p>
+            <p>{{ insights[3].energy }} energy cost /yr</p>
           </div>
         </div>
       </div>
