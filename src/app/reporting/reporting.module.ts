@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ConfigureComponent } from './configure/configure.component';
+import { ReportingComponent } from './reporting/reporting.component';
 
 
 
 @NgModule({
   declarations: [
-    ConfigureComponent
+    ReportingComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    ConfigureComponent
+    ReportingComponent
   ]
 })
-export class ConfigureModule { }
+export class ReportingModule { }

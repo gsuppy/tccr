@@ -1,4 +1,4 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 $menu-palette: mat.$gray-palette;
 
@@ -7,15 +7,39 @@ $menu-palette: mat.$gray-palette;
   flex-direction: column;
   background-color: mat.get-color-from-palette($menu-palette, 200);
   width: 100%;
-  // height: 100%;
+  height: 100%;
   padding-top: 2em;
   padding-bottom: 2em;
-  
-  .routes {
-    text-align: center;
-  }
+  max-width: 250px;
+  min-width: 200px;
+  margin-right: 0;
 
-  .footer {
-    text-align: center;
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    a {
+      text-decoration: none;
+    }
+
+    .routes {
+      text-align: left;
+    }
+
+    .footer {
+      margin-top: 5em;
+      text-align: left;
+
+      a {
+        display: flex;
+
+        mat-icon {
+          margin-top: 0.1em;
+          margin-right: 0.2em;
+        }
+      }
+    }
   }
 }

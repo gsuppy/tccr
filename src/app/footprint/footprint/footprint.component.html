@@ -1,24 +1,71 @@
 <div class="footprint-container">
   <div class="header-container">
-    <p>Tuesday</p>     
-    <button mat-raised-button color="primary">Primary</button>
-    <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+    <div class="filter-container">
+      <mat-icon>calendar_today</mat-icon>
+      <p>Tuesday, October 11, 2022</p>
+      <button mat-raised-button>Real-time</button>
+      <button mat-raised-button>Day</button>
+      <button mat-raised-button>Week</button>
+      <button mat-raised-button>Month</button>
+      <button mat-raised-button>Year</button>
+    </div>
+    <div class="share-container">
+      <button mat-raised-button color="primary">
+        <mat-icon>share</mat-icon>
+        Export & Share
+      </button>
+    </div>
   </div>
 
   <div class="optimizer-container">
-    <p>Optimizer alert: Found potential load that reduces Scope 2 footprint by 4%</p>
+    <mat-icon>highlight</mat-icon>
+    <p>
+      Optimizer alert: Found potential load that reduces Scope 2 footprint by 4%
+    </p>
+    <button mat-raised-button class="explore-button">Explore</button>
   </div>
 
   <div class="summary-container">
     <h2>Carbon Footprint</h2>
+    <div class="charts-container">
+      <div class="scope-combo" [chart]="chart"></div>
+      <div class="co2">
+        <div>
+          <h1>156.4</h1>
+          <h3>kg CO2 e per day</h3>
+        </div>
+        <div>
+          <h2>Scope 1: 42.8 kg</h2>
+          <div>
+            <h2>Fuel: 22.6 kg</h2>
+            <h2>Process: 15.9 kg</h2>
+            <h2>Transport: 4.3 kg</h2>
+          </div>
+        </div>
+        <div>
+          <h2>Scope 2: 113.6 kg</h2>
+          <div>
+            <h2>Fuel: 22.6 kg</h2>
+            <h2>Process: 15.9 kg</h2>
+            <h2>Transport: 4.3 kg</h2>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="scopes-container">
     <div class="scope-1-container">
       <h3>Scope 1 Footprint</h3>
+      <div class="scope1-chart">
+        <div [chart]="scope1"></div>
+      </div>
     </div>
     <div class="scope-2-container">
       <h3>Scope 2 Footprint</h3>
+      <div class="scope2-chart">
+        <div [chart]="scope2"></div>
+      </div>
     </div>
   </div>
 </div>

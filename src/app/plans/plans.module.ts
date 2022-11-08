@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ConfigureComponent } from './configure/configure.component';
+import { PlansComponent } from './plans/plans.component';
 
 
 
 @NgModule({
   declarations: [
-    ConfigureComponent
+    PlansComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    ConfigureComponent
+    PlansComponent
   ]
 })
-export class ConfigureModule { }
+export class PlansModule { }

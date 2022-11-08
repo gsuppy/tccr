@@ -1,12 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { OptimizerComponent } from "./optimizer/optimizer.component";
+import { MaterialModule } from "../material.module";
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [OptimizerComponent],
+  imports: [CommonModule, MaterialModule],
+  exports: [OptimizerComponent],
 })
-export class OptimizerModule { }
+export class OptimizerModule {}
