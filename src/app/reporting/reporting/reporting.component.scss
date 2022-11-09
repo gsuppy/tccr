@@ -31,6 +31,14 @@
             .generate-field {
               display: flex;
               align-items: center;
+
+              p {
+                margin: 0 1em;
+              }
+
+              .mat-form-field {
+                margin: 1em 1em 0 0;
+              }
             }
           }
         }

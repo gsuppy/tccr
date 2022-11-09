@@ -1,10 +1,52 @@
-<p>overview works!</p>
-<mat-form-field appearance="fill">
-  <mat-label>Enter a date range</mat-label>
-  <mat-date-range-input [rangePicker]="picker">
-    <input matStartDate placeholder="Start date" />
-    <input matEndDate placeholder="End date" />
-  </mat-date-range-input>
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-date-range-picker #picker></mat-date-range-picker>
-</mat-form-field>
+<div class="overview-container">
+  <app-date-filter></app-date-filter>
+  <app-notification></app-notification>
+  <div class="top-container">
+    <div class="stat-container">
+      <h1>Carbon</h1>
+      <div class="text-body">
+        <h2>156.4</h2>
+        <p>kg CO<sub>2</sub>e per day</p>
+      </div>
+      <div class="change-container">
+        <mat-icon>arrow_drop_down</mat-icon>
+        <p>4% vs. last week</p>
+      </div>
+    </div>
+    <div class="stat-container">
+      <h1>Cost - Energy & Inputs</h1>
+      <div class="text-body">
+        <h2>$7.6K</h2>
+        <p>kg CO<sub>2</sub>e per day</p>
+      </div>
+      <div class="change-container">
+        <mat-icon>arrow_drop_up</mat-icon>
+        <p>9% vs. last week</p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-container">
+    <div class="stat-container">
+      <h1>Utilization</h1>
+      <div class="text-body">
+        <h2>79%</h2>
+        <p>of machine capacity</p>
+      </div>
+      <div class="change-container">
+        <mat-icon>swap_horiz</mat-icon>
+        <p>about the same as last week</p>
+      </div>
+    </div>
+    <div class="stat-container">
+      <h1>Downtime</h1>
+      <div class="text-body">
+        <h2>1.03</h2>
+        <p>hours</p>
+      </div>
+      <div class="change-container">
+        <mat-icon>arrow_drop_down</mat-icon>
+        <p>2% vs. last week</p>
+      </div>
+    </div>
+  </div>
+</div>
