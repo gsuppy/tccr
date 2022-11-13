@@ -1,1 +1,69 @@
-<p>import works!</p>
+<div class="import-container">
+  <div class="import-data-container">
+    <h1>Import additional footprint data</h1>
+    <div class="body-container">
+      <h2>
+        Use this tool to add additional data that is not covered by TCCR
+        automated instrumentation.
+      </h2>
+      <div class="filter-container">
+        <div>
+          <h3>Usage categories included:</h3>
+          <section class="filter-group" [formGroup]="usage">
+            <mat-checkbox formControlName="machine">Electricity</mat-checkbox>
+            <mat-checkbox formControlName="fuel">Fuel</mat-checkbox>
+            <mat-checkbox formControlName="process">Process</mat-checkbox>
+            <mat-checkbox formControlName="transport">Transport</mat-checkbox>
+            <mat-checkbox formControlName="other">Other</mat-checkbox>
+          </section>
+        </div>
+        <div>
+          <h3>Data types included:</h3>
+          <section class="filter-group" [formGroup]="types">
+            <mat-checkbox formControlName="carbon">
+              Carbon footprint
+            </mat-checkbox>
+            <mat-checkbox formControlName="usage">Usage</mat-checkbox>
+            <mat-checkbox formControlName="cost">Cost</mat-checkbox>
+          </section>
+        </div>
+        <div>
+          <h3>Data granularity:</h3>
+          <section class="filter-group" [formGroup]="granularity">
+            <mat-checkbox formControlName="machine">Per-machine</mat-checkbox>
+            <mat-checkbox formControlName="aggregate">Aggregate</mat-checkbox>
+          </section>
+        </div>
+      </div>
+      <div class="schema-container">
+        <h3>Import schema</h3>
+        <p>
+          (ensure your spreadsheet or CSV file follows this format - see schema
+          help):
+        </p>
+        <img src="/assets/schema_screenshot.png" alt="schema screenshot" />
+      </div>
+      <div class="file-container">
+        <h3>Select file:</h3>
+        <div>
+          <p>Filename:</p>
+          <mat-form-field appearance="fill">
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let option of formats" [value]="option">
+                {{ option }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button mat-raised-button color="primary">Import</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="manage-data-container">
+    <h1>Manage imported data</h1>
+    <div class="manage-body-container">
+      <h3>Import</h3>
+    </div>
+  </div>
+</div>

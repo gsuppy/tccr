@@ -6,7 +6,6 @@ import { FootprintComponent } from "./footprint/footprint/footprint.component";
 import { OverviewComponent } from "./overview/overview/overview.component";
 import { MachinesComponent } from "./machines/machines/machines.component";
 import { OptimizerComponent } from "./optimizer/optimizer/optimizer.component";
-import { PlansComponent } from "./plans/plans/plans.component";
 import { ReportingComponent } from "./reporting/reporting/reporting.component";
 import { ImportComponent } from "./import/import/import.component";
 import { ConfigureComponent } from "./configure/configure/configure.component";
@@ -16,8 +15,7 @@ const routes: Routes = [
   { path: "footprint", component: FootprintComponent },
   { path: "overview", component: OverviewComponent },
   { path: "machines", component: MachinesComponent },
-  { path: "optimizer", component: OptimizerComponent },
-  { path: "plans", component: PlansComponent },
+  { path: "plans", component: OptimizerComponent },
   { path: "reporting", component: ReportingComponent },
   { path: "import", component: ImportComponent },
   { path: "configure", component: ConfigureComponent },
