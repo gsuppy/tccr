@@ -5,7 +5,7 @@
   <div class="summary-container">
     <h2>Carbon Footprint</h2>
     <div class="charts-container">
-      <div class="scope-combo" [chart]="chart"></div>
+      <div class="scope-combo" [chart]="main"></div>
       <div class="co2">
         <div>
           <h1>156.4</h1>
@@ -42,6 +42,21 @@
       <h3>Scope 2 Footprint</h3>
       <div class="scope2-chart">
         <div [chart]="scope2"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scopes-container">
+    <div class="scope-1-container">
+      <h3>Scope 1 & 2 Cost</h3>
+      <div class="scope1-chart">
+        <div [chart]="scope1_2"></div>
+      </div>
+    </div>
+    <div class="scope-2-container">
+      <h3>Scope 2 Carbon Intensity & Price</h3>
+      <div class="scope2-chart">
+        <div [chart]="scope2_intensity"></div>
       </div>
     </div>
   </div>
